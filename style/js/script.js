@@ -16,7 +16,6 @@ const ghostCardLeftEdge = ghostCard.offsetLeft;
 function setGhostCardHeight(){
     let realCardHeight = realCard.offsetHeight;
     ghostCard.style.height = realCardHeight + 'px';
-    console.log(realCard);
 }
 
 
@@ -41,21 +40,12 @@ window.addEventListener('mousemove', (event) => {
     let cursorIsInRealCardArea = mouseXPosition >= realCardLeftEdge && mouseXPosition <= realCardRightEdge && mouseYPosition >= realCardTopEdge && mouseYPosition <= realCardBottomEdge;
 
     if(cursorIsInRealCardArea){
-        // let cursorXDistanceFromCenter = mouseXPosition - realCardCenterX*0.1;
-        // let xMovement = ghostCardLeftEdge + cursorXDistanceFromCenter;
-        // let cursorYDistanceFromCenter = mouseYPosition - realCardCenterY*0.1;
-        // let yMovement = ghostCardTopEdge + cursorYDistanceFromCenter;
-        // moveGhostCardBy(xMovement, yMovement);
-        console.log({
-            state: true,
-            x: mouseXPosition,
-            realCardLeftEdge: realCardLeftEdge,
-            realCardRightEdge: realCardRightEdge,
-            y: mouseYPosition,
-            realCardTopEdge: realCardTopEdge,
-            realCardBottomEdge: realCardBottomEdge
+        let cursorXDistanceFromCenter = mouseXPosition - realCardCenterX;
+        let xMovement = ghostCardLeftEdge - cursorXDistanceFromCenter*0.05;
+        let cursorYDistanceFromCenter = mouseYPosition - realCardCenterY;
+        let yMovement = ghostCardTopEdge - cursorYDistanceFromCenter*0.05;
+        moveGhostCardBy(xMovement, yMovement);
 
-        });
     }else{
         setCardToInitialPosition();
     }
