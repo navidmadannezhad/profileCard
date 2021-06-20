@@ -4,9 +4,9 @@ let ghostCard = document.querySelector('.card-ghost');
 let realCard = document.querySelector('.card-real');
 
 let realCardLeftEdge = realCard.offsetLeft;
-let realCardTopEdge = realCard.offsetTop;
-let realCardRightEdge = realCardLeftEdge + realCard.offsetHeight;
-let realCardBottomEdge = realCardTopEdge + realCard.offsetWidth;
+let realCardTopEdge = realCard.getBoundingClientRect().top;
+let realCardRightEdge = realCardLeftEdge + realCard.offsetWidth;
+let realCardBottomEdge = realCardTopEdge + realCard.offsetHeight;
 let realCardCenterX = realCardLeftEdge + realCard.offsetWidth/2;
 let realCardCenterY = realCardTopEdge + realCard.offsetHeight/2;
 
@@ -19,7 +19,6 @@ function setGhostCardHeight(){
     console.log(realCard);
 }
 
-console.log(realCardTopEdge);
 
 function moveGhostCardBy(x, y){
     ghostCard.style.left = x + 'px';
@@ -47,7 +46,16 @@ window.addEventListener('mousemove', (event) => {
         // let cursorYDistanceFromCenter = mouseYPosition - realCardCenterY*0.1;
         // let yMovement = ghostCardTopEdge + cursorYDistanceFromCenter;
         // moveGhostCardBy(xMovement, yMovement);
-        console.log('is in!');
+        console.log({
+            state: true,
+            x: mouseXPosition,
+            realCardLeftEdge: realCardLeftEdge,
+            realCardRightEdge: realCardRightEdge,
+            y: mouseYPosition,
+            realCardTopEdge: realCardTopEdge,
+            realCardBottomEdge: realCardBottomEdge
+
+        });
     }else{
         setCardToInitialPosition();
     }
