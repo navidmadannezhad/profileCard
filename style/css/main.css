@@ -1,10 +1,14 @@
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/Vazir.ttf");
+}
+
 * {
   padding: 0px;
   margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   direction: rtl;
-  font-family: iransansweb;
+  font-family: vazir;
 }
 
 div.bigger-circle {
@@ -19,8 +23,7 @@ div.bigger-circle div.circle {
   padding-bottom: 100%;
   border-radius: 50%;
   background-color: #99d4f9;
-  -webkit-box-shadow: 0px 0px 100px 100px #99d4f9;
-          box-shadow: 0px 0px 100px 100px #99d4f9;
+  box-shadow: 0px 0px 100px 100px #99d4f9;
 }
 
 div.smaller-circle {
@@ -35,34 +38,23 @@ div.smaller-circle div.circle {
   padding-bottom: 100%;
   border-radius: 50%;
   background-color: #99d4f9;
-  -webkit-box-shadow: 0px 0px 100px 100px #99d4f9;
-          box-shadow: 0px 0px 100px 100px #99d4f9;
+  box-shadow: 0px 0px 100px 100px #99d4f9;
 }
 
 html, body {
   min-height: 100vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(-25deg, #99d4f9 5%, #bef9f5 90%);
 }
 
 html div.card-container, body div.card-container {
   z-index: 10;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -81,8 +73,6 @@ html div.card-container div.card-real, body div.card-container div.card-real {
   width: 40%;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -128,15 +118,9 @@ html div.card-container div.card-real div.information-container div.description,
 
 html div.card-container div.card-real div.information-container div.statistics, body div.card-container div.card-real div.information-container div.statistics {
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 html div.card-container div.card-real div.information-container div.statistics > div, body div.card-container div.card-real div.information-container div.statistics > div {
@@ -175,6 +159,7 @@ html div.card-container div.card-real div.information-container div.buttons butt
   html div.card-container div.card-real, body div.card-container div.card-real {
     width: 60%;
   }
+
   html div.card-container div.card-ghost, body div.card-container div.card-ghost {
     width: 65%;
   }
@@ -184,65 +169,51 @@ html div.card-container div.card-real div.information-container div.buttons butt
   html div.card-container, body div.card-container {
     z-index: 10;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
+
   html div.card-container div.card-real, body div.card-container div.card-real {
     width: 60%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
+
   html div.card-container div.card-real div.pic-container, body div.card-container div.card-real div.pic-container {
     width: 100%;
     padding: 30px;
     height: auto !important;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     height: 200px;
   }
+
   html div.card-container div.card-real div.pic-container div.picture, body div.card-container div.card-real div.pic-container div.picture {
     width: 100px;
     height: 100px;
   }
+
   html div.card-container div.card-real div.information-container, body div.card-container div.card-real div.information-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     padding: 30px;
   }
+
   html div.card-container div.card-real div.information-container div.name, body div.card-container div.card-real div.information-container div.name {
     text-align: center;
   }
+
   html div.card-container div.card-real div.information-container div.description, body div.card-container div.card-real div.information-container div.description {
     font-size: 0.8rem;
     text-align: center;
   }
+
   html div.card-container div.card-real div.information-container div.statistics, body div.card-container div.card-real div.information-container div.statistics {
     width: 60%;
   }
+
   html div.card-container div.card-real div.information-container div.statistics > div:not(div.seperator), body div.card-container div.card-real div.information-container div.statistics > div:not(div.seperator) {
     text-align: center;
     padding: 0px 5px;
@@ -253,33 +224,25 @@ html div.card-container div.card-real div.information-container div.buttons butt
   html div.card-container, body div.card-container {
     z-index: 10;
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
+
   html div.card-container div.card-real, body div.card-container div.card-real {
     width: 80%;
   }
+
   html div.card-container div.card-real div.buttons, body div.card-container div.card-real div.buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
+
   html div.card-container div.card-real div.buttons button.follow, body div.card-container div.card-real div.buttons button.follow {
     margin-bottom: 10px;
   }
+
   html div.card-container div.card-ghost, body div.card-container div.card-ghost {
     width: 85%;
   }
 }
-/*# sourceMappingURL=main.css.map */

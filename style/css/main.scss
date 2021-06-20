@@ -2,12 +2,17 @@ $font1: 1.2rem;
 $font2: 1rem;
 $font3: 0.8rem;
 
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/Vazir.ttf"),
+}
+
 *{
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     direction: rtl;
-    font-family: iransansweb;
+    font-family: vazir;
 }
 
 div.bigger-circle{
