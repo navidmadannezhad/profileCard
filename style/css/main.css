@@ -88,7 +88,7 @@ html div.card-container div.card-real div.pic-container div.picture, body div.ca
   background-image: url("http://navidmnzh.ir/images/me.jpeg?032a72c5a647f8ada8a51c50efd1aa16");
   background-size: cover;
   border-radius: 50%;
-  outline: 5px solid white;
+  border: 5px solid white;
 }
 
 html div.card-container div.card-real div.information-container, body div.card-container div.card-real div.information-container {
